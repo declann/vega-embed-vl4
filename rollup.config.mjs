@@ -44,7 +44,6 @@ export default [
         name: "vegaEmbed",
         globals: {
           vega: "vega",
-          "vega-lite": "vegaLite",
         },
       },
       {
@@ -54,12 +53,11 @@ export default [
         name: "vegaEmbed",
         globals: {
           vega: "vega",
-          "vega-lite": "vegaLite",
         },
         plugins: [terser()],
       },
     ],
     plugins: plugins("defaults", false),
-    external: ["vega", "vega-lite"],
+    external: ["vega"],
   },
 ];
